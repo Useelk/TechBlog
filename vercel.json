@@ -1,12 +1,5 @@
 {
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs24.x"
-    }
-  },
-  "build": {
-    "env": {
-      "NODE_VERSION": "24"
-    }
-  }
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/fire-blog",
+  "framework": "angular"
 }
