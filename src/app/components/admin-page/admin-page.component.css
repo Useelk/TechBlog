@@ -41,3 +41,7 @@
 .menu-toggle:hover {
     color: var(--accent-cyan) !important;
 }
+
+.route-container {
+    position: relative;
+}

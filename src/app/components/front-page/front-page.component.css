@@ -3,3 +3,8 @@
     flex-direction: column;
     min-height: calc(100vh - 57px);
 }
+
+.route-container {
+    position: relative;
+    flex: 1;
+}

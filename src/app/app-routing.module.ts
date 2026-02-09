@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AdminGuard } from './guards/admin.guard';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/front-page/front-page.module').then(m => m.FrontPageModule)
   },
   { path: "login", component: LoginPageComponent },
-
+  { path: "**", component: NotFoundComponent }
 ];
 
 @NgModule({

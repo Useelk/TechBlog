@@ -14,7 +14,9 @@
       <button type="button" mat-icon-button class="menu-toggle" (click)="drawer.toggle()">
           <mat-icon>menu</mat-icon>
       </button>
-      <router-outlet></router-outlet>
+      <div class="route-container" [@routeAnimations]="prepareRoute(adminOutlet)">
+          <router-outlet #adminOutlet="outlet"></router-outlet>
+      </div>
     </div>
 
 </mat-drawer-container>

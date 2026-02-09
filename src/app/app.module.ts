@@ -13,12 +13,14 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule } from "@angular/common/http";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

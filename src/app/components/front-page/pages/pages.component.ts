@@ -13,20 +13,25 @@ import { PostService } from 'src/app/services/posts/post.service';
 export class PagesComponent {
   menu: Menu;
   postList: Post[];
+  loading = true;
 
   constructor(
     private route: ActivatedRoute,
     private menus: MenusService,
     private posts: PostService
-    ) {
+  ) {
     this.route.params.subscribe(params => {
+      this.loading = true;
       this.menus.getConditionalMenus("url", "==", params.url).subscribe(
         menus => {
          if (menus.length) {
           this.menu = menus[0];
           this.posts.getConditionalPosts("menu_id", "==", this.menu.id).subscribe(posts => {
             this.postList = posts;
+            this.loading = false;
            })
+         } else {
+           this.loading = false;
          }
         }
       )
