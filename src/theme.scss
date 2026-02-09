@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary-palette: mat.define-palette(mat.$cyan-palette, 400, 200, 700);
+$accent-palette: mat.define-palette(mat.$green-palette, A400, A200, A700);
+$warn-palette: mat.define-palette(mat.$deep-orange-palette, A200);
+
+$typography-config: mat.define-typography-config(
+  $font-family: 'Roboto, sans-serif'
+);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette,
+  ),
+  typography: $typography-config,
+  density: 0,
+));
+
+@include mat.all-component-themes($dark-theme);

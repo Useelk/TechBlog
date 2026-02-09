@@ -1,21 +1,87 @@
+.admin-section {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-heading);
+    margin-bottom: var(--space-xl);
+}
+
+.terminal-prompt {
+    color: var(--accent-green);
+}
+
+.form-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.add-button {
+    align-self: flex-start;
+    font-family: var(--font-mono) !important;
+    margin-top: var(--space-sm);
+}
+
+.table-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    overflow: hidden;
+}
+
+.filter-field {
+    width: 100%;
+}
+
+.table-wrapper {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+}
+
 table {
     width: 100%;
-  }
-  
-.mat-mdc-form-field {
-    font-size: 14px;
-    width: 100%;
-    
 }
-  
+
 td, th {
     width: 25%;
 }
 
-.add_button {
-    margin: 0px 0px 20px 20px;
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
 }
 
+.edit-btn {
+    color: var(--accent-cyan) !important;
+    transition: text-shadow var(--transition-fast);
+}
+
+.edit-btn:hover {
+    text-shadow: var(--glow-cyan);
+}
+
+.delete-btn {
+    color: var(--accent-orange) !important;
+    transition: text-shadow var(--transition-fast);
+}
+
+.delete-btn:hover {
+    text-shadow: 0 0 10px rgba(255, 110, 64, 0.5);
+}
 
 .mat-column-actions {
     width: 100%;

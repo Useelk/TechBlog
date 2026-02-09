@@ -1,1 +1,46 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">
+            <span class="terminal-prompt">&gt;</span> Dashboard
+        </h1>
+        <p class="dashboard-subtitle">System overview and content management</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <mat-icon class="stat-icon cyan">article</mat-icon>
+            <div class="stat-info">
+                <span class="stat-value">{{ postCount }}</span>
+                <span class="stat-label">Total Posts</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <mat-icon class="stat-icon green">menu_book</mat-icon>
+            <div class="stat-info">
+                <span class="stat-value">{{ menuCount }}</span>
+                <span class="stat-label">Menu Categories</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <mat-icon class="stat-icon purple">verified_user</mat-icon>
+            <div class="stat-info">
+                <span class="stat-value">Active</span>
+                <span class="stat-label">System Status</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-actions">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="actions-row">
+            <button mat-raised-button class="action-card" routerLink="../posts">
+                <mat-icon>add_circle</mat-icon>
+                Manage Posts
+            </button>
+            <button mat-raised-button class="action-card" routerLink="../menus">
+                <mat-icon>category</mat-icon>
+                Manage Menus
+            </button>
+        </div>
+    </div>
+</div>

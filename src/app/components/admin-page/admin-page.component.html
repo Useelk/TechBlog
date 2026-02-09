@@ -1,21 +1,20 @@
 <app-navbar></app-navbar>
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+<mat-drawer-container class="admin-container" autosize>
+    <mat-drawer #drawer class="admin-sidenav" mode="side">
 
       <mat-nav-list>
         <mat-list-item *ngFor="let link of links">
-           <a matListItemTitle [routerLink]="link.link">{{ link.name }}</a>
+           <a matListItemTitle class="sidenav-link" [routerLink]="link.link" routerLinkActive="sidenav-active">{{ link.name }}</a>
         </mat-list-item>
       </mat-nav-list>
 
     </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-          <i class="material-icons">menu</i>
+
+    <div class="admin-content">
+      <button type="button" mat-icon-button class="menu-toggle" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
       </button>
       <router-outlet></router-outlet>
     </div>
-  
-  </mat-drawer-container>
-  
+
+</mat-drawer-container>

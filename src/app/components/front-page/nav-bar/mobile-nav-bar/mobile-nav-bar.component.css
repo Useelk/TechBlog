@@ -1,20 +1,39 @@
-mat-drawer-container{
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
+mat-drawer-container {
+    color: var(--text-primary);
+    background-color: transparent;
 }
-
 
 .profileImg {
     max-height: 30px;
     max-width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-cyan);
 }
 
-.userContainer{
+.userContainer {
     display: flex;
     align-items: center;
 }
 
-.example-sidenav{
-    top: 52px;
-    opacity: 0.95;
+.example-sidenav {
+    top: 64px;
+    background: var(--bg-secondary) !important;
+    border-left: 1px solid var(--border-subtle);
+    min-width: 200px;
+}
+
+.example-sidenav button {
+    color: var(--text-secondary) !important;
+    width: 100%;
+    text-align: left;
+    transition: color var(--transition-fast);
+}
+
+.example-sidenav button:hover {
+    color: var(--accent-cyan) !important;
+    background: rgba(0, 229, 255, 0.05) !important;
+}
+
+.example-icon {
+    color: var(--text-secondary);
 }

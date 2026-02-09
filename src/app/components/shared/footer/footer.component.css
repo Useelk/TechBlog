@@ -1,0 +1,30 @@
+.site-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--space-lg) var(--space-xl);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-cyan);
+    font-size: 0.875rem;
+}
+
+.footer-divider {
+    color: var(--text-muted);
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}

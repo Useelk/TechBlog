@@ -1,3 +1,32 @@
+.dark-toolbar {
+    background: linear-gradient(180deg, rgba(10, 14, 23, 0.95) 0%, rgba(17, 24, 39, 0.9) 100%) !important;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand-button {
+    padding: 0 var(--space-md) !important;
+}
+
+.brand-text {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+}
+
+.admin-badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--bg-primary);
+    background: var(--accent-orange);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    margin-left: var(--space-sm);
+    letter-spacing: 0.1em;
+}
+
 .spacer {
     flex: 1 1 auto;
 }
@@ -5,13 +34,31 @@
 .profileImg {
     max-height: 30px;
     max-width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-cyan);
 }
 
-.userContainer{
+.userContainer {
     display: flex;
     align-items: center;
+    gap: var(--space-sm);
 }
 
-.userContainer>img {
-    padding: 5px;
+.userContainer > img {
+    padding: 0;
+}
+
+.user-name {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+}
+
+.login-btn {
+    color: var(--accent-green) !important;
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    border-radius: var(--radius-sm);
 }

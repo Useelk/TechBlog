@@ -1,39 +1,82 @@
 .cards {
     column-count: 3;
-    column-gap: 1;
-    padding: 10px;
+    column-gap: var(--space-lg);
+    padding: var(--space-xl);
+    background: var(--bg-primary);
+    min-height: calc(100vh - 64px);
 }
 
-mat-card {
+.post-card {
     display: inline-block;
     position: static;
-    margin: 10px;
+    margin-bottom: var(--space-lg);
     break-inside: avoid;
-    width: 90%;
+    width: 100%;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md) !important;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
-@media screen and (max-width: 1264px)  {
+.post-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+.card-avatar {
+    background: rgba(0, 229, 255, 0.1) !important;
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    color: var(--text-heading) !important;
+    font-weight: 500 !important;
+}
+
+.card-subtitle {
+    color: var(--text-muted) !important;
+    font-family: var(--font-mono);
+    font-size: 12px !important;
+    margin: var(--space-sm) 0 !important;
+}
+
+mat-card-content {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.action-btn {
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+}
+
+.favorite-btn {
+    color: var(--text-muted) !important;
+}
+
+.favorite-btn:hover {
+    color: var(--accent-orange) !important;
+}
+
+.share-btn {
+    color: var(--text-muted) !important;
+}
+
+.share-btn:hover {
+    color: var(--accent-purple) !important;
+}
+
+@media screen and (max-width: 1264px) {
     .cards {
         column-count: 2;
-        column-gap: 1;
-        padding: 10px;
     }
 }
 
-@media screen and (max-width: 725px)  {
+@media screen and (max-width: 725px) {
     .cards {
         column-count: 1;
-        column-gap: 1;
-        padding: 10px;
     }
-}
-
-
-.cards {
-    background: rgb(247,230,214);
-    background: linear-gradient(180deg, rgba(247,230,214,1) 31%, rgba(192,235,244,1) 100%);
-}
-
-mat-card-subtitle{
-    margin: 15px 0;
 }

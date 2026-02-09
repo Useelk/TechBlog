@@ -1,4 +1,18 @@
-<div *ngIf="!user">
-    <h1>Login to acc</h1>
-    <button (click)="login()" >Login</button>
+<div class="login-container" *ngIf="!user">
+    <div class="login-card">
+        <div class="login-header">
+            <span class="login-icon">&lt;/&gt;</span>
+            <h1 class="login-title">Access Terminal</h1>
+            <p class="login-subtitle">Authenticate to continue</p>
+        </div>
+        <div class="login-body">
+            <button mat-raised-button class="google-btn" (click)="login()">
+                <mat-icon>login</mat-icon>
+                Sign in with Google
+            </button>
+        </div>
+        <div class="login-footer">
+            <span class="login-hint">Secure authentication via Google OAuth</span>
+        </div>
+    </div>
 </div>

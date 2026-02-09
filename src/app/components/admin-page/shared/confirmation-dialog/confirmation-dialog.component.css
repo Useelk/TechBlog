@@ -1,0 +1,43 @@
+.dialog-title {
+    font-family: var(--font-mono) !important;
+    color: var(--text-heading) !important;
+    display: flex !important;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.dialog-icon.warning {
+    color: var(--accent-orange);
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.confirm-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.dialog-actions {
+    padding: var(--space-md) var(--space-lg) !important;
+    gap: var(--space-sm);
+}
+
+.confirm-btn.danger {
+    background: var(--accent-orange) !important;
+    color: #fff !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+}
+
+.confirm-btn.danger:hover {
+    box-shadow: 0 0 15px rgba(255, 110, 64, 0.4);
+}
+
+.cancel-btn {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-subtle) !important;
+    font-family: var(--font-mono) !important;
+}

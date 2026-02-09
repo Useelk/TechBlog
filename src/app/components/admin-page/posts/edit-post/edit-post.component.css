@@ -1,7 +1,53 @@
-.mat-mdc-form-field {
-    display: flex;
+.dialog-title {
+    font-family: var(--font-mono) !important;
+    color: var(--text-heading) !important;
+    display: flex !important;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
-mat-dialog-content {
-    width: 80vw;
+.dialog-icon {
+    color: var(--accent-cyan);
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+.mat-mdc-form-field {
+    display: flex;
+    margin-bottom: var(--space-sm);
+}
+
+.dialog-actions {
+    padding: var(--space-md) var(--space-lg) !important;
+    gap: var(--space-sm);
+}
+
+.confirm-btn {
+    background: var(--accent-cyan) !important;
+    color: var(--bg-primary) !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+}
+
+.confirm-btn:hover {
+    box-shadow: var(--glow-cyan);
+}
+
+.cancel-btn {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-subtle) !important;
+    font-family: var(--font-mono) !important;
+}
+
+.cancel-btn:hover {
+    border-color: var(--accent-orange) !important;
+    color: var(--accent-orange) !important;
 }

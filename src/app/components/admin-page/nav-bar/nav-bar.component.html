@@ -1,17 +1,20 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="dark-toolbar">
     <mat-toolbar-row>
-        <button mat-button [routerLink]="['/']">Tech Blog</button>
+        <button mat-button class="brand-button" [routerLink]="['/']">
+            <span class="brand-text">&lt;/&gt; Tech Blog</span>
+        </button>
+        <span class="admin-badge">ADMIN</span>
         <span class="spacer"></span>
 
         <div *ngIf="!user">
-            <button mat-button (click)="auth.loginWithGoogle()">Login</button>
+            <button mat-button class="nav-link login-btn" (click)="auth.loginWithGoogle()">Login</button>
         </div>
 
         <div *ngIf="user">
             <button mat-button [matMenuTriggerFor]="menu">
                 <span class="userContainer">
-                    <span>Hello {{ user.displayName | titlecase }}</span>
-                    <img class="profileImg" [src]="user.photoURL" alt="profileImg">    
+                    <span class="user-name">Hello {{ user.displayName | titlecase }}</span>
+                    <img class="profileImg" [src]="user.photoURL" alt="profileImg">
                 </span>
             </button>
               <mat-menu #menu="matMenu">
@@ -27,4 +30,4 @@
         </div>
 
     </mat-toolbar-row>
-  </mat-toolbar>
+</mat-toolbar>

@@ -1,23 +1,25 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="dark-toolbar">
     <mat-toolbar-row>
-        <button mat-button [routerLink]="['/']">JS Tech Blog</button>
+        <button mat-button class="brand-button" [routerLink]="['/']">
+            <span class="brand-text">&lt;/&gt; Tech Blog</span>
+        </button>
         <span class="spacer"></span>
 
         <div class="navList" *ngIf="getScreenWidth > 800">
           <div *ngFor="let menu of menuList">
-            <button mat-button [routerLink]="'pages/' + menu.url"> {{ menu.title }} </button>
+            <button mat-button class="nav-link" [routerLink]="'pages/' + menu.url" routerLinkActive="active-link"> {{ menu.title }} </button>
           </div>
-  
-          <button mat-button *ngIf="user?.roles.subscriber" [routerLink]="['/article']">Pro Blog</button>
+
+          <button mat-button class="nav-link" *ngIf="user?.roles.subscriber" [routerLink]="['/article']" routerLinkActive="active-link">Pro Blog</button>
           <div *ngIf="!user">
-              <button mat-button (click)="auth.loginWithGoogle()">Login</button>
+              <button mat-button class="nav-link login-btn" (click)="auth.loginWithGoogle()">Login</button>
           </div>
-  
+
           <div *ngIf="user">
               <button mat-button [matMenuTriggerFor]="menu">
                   <span class="userContainer">
-                      <span>Hello {{ user.displayName | titlecase }}</span>
-                      <img class="profileImg" [src]="user.photoURL" alt="profileImg">    
+                      <span class="user-name">Hello {{ user.displayName | titlecase }}</span>
+                      <img class="profileImg" [src]="user.photoURL" alt="profileImg">
                   </span>
               </button>
                 <mat-menu #menu="matMenu">
@@ -31,13 +33,11 @@
                   </button>
                 </mat-menu>
           </div>
-
         </div>
 
         <div *ngIf="getScreenWidth < 800">
           <app-mobile-nav-bar [user]="user" [menuList]="menuList"></app-mobile-nav-bar>
         </div>
 
-
-  </mat-toolbar-row>
+    </mat-toolbar-row>
 </mat-toolbar>

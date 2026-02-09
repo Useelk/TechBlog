@@ -1,18 +1,21 @@
-<h2 mat-dialog-title>Edit</h2>
+<h2 mat-dialog-title class="dialog-title">
+    <mat-icon class="dialog-icon">mode_edit</mat-icon>
+    Edit Menu
+</h2>
 <form [formGroup]="editForm">
-    <mat-dialog-content>
-        <mat-form-field>
+    <mat-dialog-content class="dialog-content">
+        <mat-form-field appearance="fill">
             <mat-label>Title</mat-label>
             <input matInput [value]="" placeholder="Title" formControlName="title">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <mat-label>URL</mat-label>
             <input matInput placeholder="URL" formControlName="url">
         </mat-form-field>
     </mat-dialog-content>
-    
-    <mat-dialog-actions>
-        <button mat-raised-button [mat-dialog-close]="editForm">Yes</button>
-        <button mat-raised-button mat-dialog-close="false">Cancle</button>    
+
+    <mat-dialog-actions class="dialog-actions">
+        <button mat-raised-button class="confirm-btn" [mat-dialog-close]="editForm">Save</button>
+        <button mat-raised-button class="cancel-btn" mat-dialog-close="false">Cancel</button>
     </mat-dialog-actions>
 </form>

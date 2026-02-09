@@ -1,40 +1,102 @@
+:host {
+    display: block;
+}
+
+.dark-toolbar {
+    background: linear-gradient(180deg, rgba(10, 14, 23, 0.95) 0%, rgba(17, 24, 39, 0.9) 100%) !important;
+    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-button {
+    padding: 0 var(--space-md) !important;
+}
+
+.brand-text {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+    letter-spacing: -0.02em;
+}
+
 .spacer {
     flex: 1 1 auto;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+.nav-link.active-link {
+    color: var(--accent-cyan) !important;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+.nav-link.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+    border-radius: 1px;
+}
+
+.login-btn {
+    color: var(--accent-green) !important;
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    border-radius: var(--radius-sm);
+}
+
+.login-btn:hover {
+    background: rgba(0, 230, 118, 0.1) !important;
+    box-shadow: var(--glow-green);
 }
 
 .profileImg {
     max-height: 30px;
     max-width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-cyan);
 }
 
-.userContainer{
+.userContainer {
     display: flex;
     align-items: center;
+    gap: var(--space-sm);
 }
 
-.userContainer>img {
-    padding: 5px;
+.user-name {
+    color: var(--text-secondary);
+    font-size: 13px;
 }
 
-.navList{
+app-mobile-nav-bar {
     display: flex;
 }
 
-mat-drawer-container{
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.example-sidenav{
-    top: 52px;
-    opacity: 0.95;
-}
-
-.ng-star-inserted{
+.ng-star-inserted {
     display: flex;
 }
-
-app-mobile-nav-bar{
-    display: flex;
-}
-
